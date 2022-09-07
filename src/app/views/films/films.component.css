@@ -1,0 +1,14 @@
+table, th, td {
+    border:1px solid black;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    
+  }
+.title:hover {
+    background-color: rgba(255, 255, 255, 0.729);   
+    cursor: pointer;
+  }
+  .spinner{
+    margin: auto;
+  }

@@ -1,0 +1,106 @@
+<mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>
+
+<!-- <mat-progress-bar *ngIf="!isLoading" mode="indeterminate"></mat-progress-bar> -->
+<table *ngIf="films$ | async as films" class="table-container">
+    <thead>
+        <tr>
+            <Th>
+                <mat-card class="title">
+
+                    {{films.title}} | EPISODE {{films.episode_id}}
+
+                </mat-card>
+            </Th>
+        </tr>
+    </thead>
+    <tbody>
+        <mat-card >
+            <tr>
+                <td>
+                    <table>
+                        <thead>
+
+                            <th class="content">Opening Crawl</th>
+                            
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>
+
+                                    {{films.opening_crawl}}
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <table>
+                                    <thead>
+                                        <th class="content">director</th>
+                                        <th class="content">producer</th>
+                                        <th class="content">release_date</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{films.director}}</td>
+                                            <td>{{films.producer}}</td>
+                                            <td>{{films.release_date}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </tr>
+                            <tr>
+                                <mat-accordion *ngIf="films$ | async as films">
+                                    <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
+                                        (closed)="panelOpenState = false">
+                                        <mat-expansion-panel-header>
+                                            <mat-panel-title *ngIf="films">
+                                                Planets/Starships/Vehicles details
+                                            </mat-panel-title>
+                                            <mat-panel-description>
+                                                Click to see details
+                                            </mat-panel-description>
+
+                                        </mat-expansion-panel-header>
+                                        <td> Planets
+                                            <ul *ngFor="let item of films.planets">
+                                                <li>{{item.name}}</li>
+                                            </ul>
+                                        </td>
+                                        <td> Starships
+                                            <ul *ngFor="let item of films.starships">
+                                                <li>{{item.name}}</li>
+                                            </ul>
+                                        </td>
+                                        <td> Vehicles
+                                            <ul *ngFor="let item of films.vehicles">
+                                                <li>{{item.name}}</li>
+                                            </ul>
+                                        </td>
+                                    </mat-expansion-panel>
+                                </mat-accordion>
+                            </tr>
+                        </tbody>
+                        <mat-accordion *ngIf="films$ | async as films">
+                            <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
+                                (closed)="panelOpenState = false">
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title *ngIf="films">
+                                        Film characters
+                                    </mat-panel-title>
+                                    <mat-panel-description>
+                                        click to see details
+                                    </mat-panel-description>
+
+                                </mat-expansion-panel-header>
+                                <ul *ngFor="let item of films.characters">
+                                    <li>{{item.name}}</li>
+                                </ul>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </table>
+                </td>
+            </tr>
+        </mat-card>
+    </tbody>
+</table>

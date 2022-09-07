@@ -1,0 +1,47 @@
+
+table {
+    margin: auto;
+    font-size: 20px;
+    width: 90%;
+    
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    line-break: anywhere;
+   
+}
+li{
+  list-style: none;
+}
+ul{
+  margin: auto;
+}
+
+th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+  .content{
+    font-size: 1.03rem;
+    font-family: 'Silkscreen', cursive;
+}
+  .container{
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    
+  }
+  .accordion{
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+.spinner{
+  margin: auto;
+  
+}

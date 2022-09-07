@@ -1,0 +1,140 @@
+
+<!-- <table>
+    <thead>
+        <tr>
+            <th>
+                <h2 class="" >Nome</h2>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngIf="people$ | async as people" >
+    
+        <tr *ngFor="let item of people"  >
+            <td >
+                    <mat-card class="title" >
+                    {{item.name}}
+                    </mat-card>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+<form [formGroup]="formgroup">
+    <mat-form-field>
+        <mat-label>
+            Employee
+        </mat-label>
+        <input formControlName="employee" matInput type="text" [matAutocomplete]="auto"/>
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let item of filteredoptions" [value]="item">
+                {{item}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>
+
+<mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>
+
+<!-- <mat-progress-bar *ngIf="!isLoading" mode="indeterminate" ></mat-progress-bar> -->
+<div class="container">
+    
+<mat-card class="title container" *ngIf="people$ | async as people">
+    {{people.name}} 
+
+     </mat-card>
+
+<table *ngIf="people$ | async as people">
+    <mat-card>
+    <thead>
+        <tr>
+            <th>
+                <h2 class="">Character Details</h2>
+               
+
+            </th>
+        </tr>
+    </thead>
+    <tbody >
+      
+         <tr>
+            <td >
+                    <table>
+                        <thead>
+                        <th class="content">height</th>
+                        <th class="content">mass</th>
+                        <th class="content">hair color</th>
+                        <th class="content">skin_color</th>
+                        <th class="content">eye_color</th>
+                        <th class="content">birth_year</th>
+                        <th class="content">gender</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                            {{people.height}}
+                        </td>
+                            <td>
+                           {{people.mass}}
+                        </td>
+                            <td>
+                            {{people.hair_color}}
+                        </td>
+                        <td>
+                            {{people.skin_color}}
+                        </td>
+                        <td>
+                            {{people.eye_color}}
+                        </td>
+                        <td>
+                            {{people.birth_year}}
+                        </td>
+                        <td>
+                            {{people.gender}}
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                      
+                        <th>
+                            films
+                        </th>
+                        <th>
+                            vehicles
+                        </th>
+                        <th>
+                            starships
+                        </th>
+                    </thead>
+                    <tbody>
+                        <!-- <td>
+                            <ul  *ngFor="let item of people.homeworld">
+                                <li>{{item.name}}</li>
+                              </ul>  
+                          
+                        </td> -->
+                        <td >
+                          <ul  *ngFor="let item of people.films">
+                            <li>{{item.title}}</li>
+                          </ul>  
+                        </td>
+                        <td >
+                            <ul   *ngFor="let item of people.vehicles">
+                                <li>{{item.name}}</li>
+                              </ul>  
+                        </td>
+                        <td>
+                            <ul  *ngFor="let item of people.starships">
+                                <li>{{item.name}}</li>
+                              </ul>  
+                        </td>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</mat-card>
+</table>
+</div>

@@ -1,0 +1,58 @@
+/* 
+  
+  *{
+    color: black;
+  }
+  table, th, td {
+    border:1px solid black;
+    color: black;
+    width: 90%;
+    margin: auto;
+    padding: 5;
+    font-size: 0.8rem;
+    
+
+  } 
+
+  td{
+  padding:
+   10px 20px 10px 20px;
+   font-size: 0.9rem;
+  } */
+  table {
+    margin: auto;
+    font-size: 20px;
+    width: 90%;
+    
+}
+li{
+  list-style: none;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    line-break: anywhere;
+}
+
+th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+  .content{
+    font-size: 1.03rem;
+    font-family: 'Silkscreen', cursive;
+}
+  .container{
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    
+  }
+ 
+  .spinner{
+    margin: auto;
+  }

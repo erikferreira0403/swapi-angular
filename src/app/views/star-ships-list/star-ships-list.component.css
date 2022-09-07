@@ -1,0 +1,50 @@
+*{
+    color: black;
+}
+.results{
+    display: flex;
+    flex-direction: row;
+}
+
+table, th, td {
+    border:1px solid black;
+    color: black;
+    width: 90%;
+    margin: auto;
+    padding: 5;
+    font-size: 0.8rem;
+
+  } 
+
+  td{
+  padding:
+   10px 20px 10px 20px;
+   font-size: 0.9rem;
+   
+  }
+
+.accordion{
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+
+
+h2{
+    text-transform: uppercase;
+}
+li{
+    list-style: none;
+    
+}
+.title{
+    
+    font-family: 'Silkscreen', cursive;
+}
+.content{
+    font-size: 1.03rem;
+    font-family: 'Silkscreen', cursive;
+}
+.spinner{
+    margin: auto;
+  }

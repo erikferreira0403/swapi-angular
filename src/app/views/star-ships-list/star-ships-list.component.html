@@ -1,0 +1,129 @@
+<!-- <mat-progress-bar *ngIf="!isLoading" mode="indeterminate" ></mat-progress-bar> -->
+<mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>
+
+
+<mat-accordion  *ngIf="starShips$ | async as starShips">    
+    <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false" *ngFor="let item of starShips.results" >
+      <mat-expansion-panel-header>
+        <mat-panel-title *ngIf="starShips" >
+          {{item.name}}
+        </mat-panel-title>
+        <mat-panel-description>
+           Details
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div class="container">
+      <table class="mat-elevation-z4">
+        <thead>
+            <tr>
+                <th>
+                    <h2 class="content">Name</h2>
+                </th>
+                <th>
+                    <h2 class="content">manufacturer</h2>
+                </th>
+                <th>
+                    <h2 class="content">crew</h2>
+                </th>
+                <th>
+                    <h2 class="content">cost_in_credits</h2>
+                </th>
+                <th>
+                    <h2 class="content">max_atmosphering_speed</h2>
+                </th>
+                <th>
+                    <h2 class="content" >length</h2>
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td >
+                    {{item.name}}
+                </td>
+                <td>
+                    {{item.manufacturer}}
+                </td>
+                <td>
+                    {{item.crew}}
+                </td>
+                <td>
+                    {{item.cost_in_credits}}
+                </td>
+              
+                <td>
+                    {{item.max_atmosphering_speed}}
+                </td>
+                <td>
+                    {{item.length}}
+                </td>
+              
+
+            </tr>
+        </tbody>
+        <br>
+        <thead>
+            <tr>
+                <th>
+                    <h2 class="content">cargo_capacity</h2>
+                </th>
+                <th>
+                    <h2 class="content">consumables</h2>
+                </th>
+                <th>
+                    <h2 class="content">hyperdrive_rating</h2>
+                </th>
+                <th>
+                    <h2 class="content">MGLT</h2>
+                </th>
+                <th>
+                    <h2 class="content">starship_class</h2>
+                </th>
+                
+                <th>
+                    <h2 class="content">passengers</h2>
+                </th>
+                
+                <th>
+                    <h2 class="content">films</h2>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td >
+                    {{item.cargo_capacity}}
+                </td>
+                <td>
+                    {{item.consumables}}
+                </td>
+                <td>
+                    {{item.hyperdrive_rating}}
+                </td>
+                <td>
+                    {{item.MGLT}}
+                </td>
+                <td>
+                    {{item.starship_class}}
+                </td>
+                
+                <td>
+                    {{item.passengers}}
+                </td>
+                <td>
+                    <ul class="films" *ngFor="let item of item.films">
+                        <li>{{item}}</li>
+                    </ul>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table> 
+</div>
+
+    </mat-expansion-panel>
+    
+  </mat-accordion>
