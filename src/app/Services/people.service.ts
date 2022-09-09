@@ -16,9 +16,7 @@ export class PeopleService {
   constructor(private http: HttpClient) { }
 
   getPeople() : Observable<any> {
-  
     return this.http.get(this.urlPeople);
-   
     }
 
   getPeoplebyId(Id: string ) : Observable<any> {
@@ -27,7 +25,6 @@ export class PeopleService {
       forkJoin(movie.vehicles.map((vehicles: string) => this.http.get(vehicles)))
         .subscribe((vehicles: any) => {
           movie.vehicles = vehicles;
-          
         });
         forkJoin(movie.starships.map((starship: string) => this.http.get(starship)))
         .subscribe((starships: any) => {
@@ -46,29 +43,21 @@ export class PeopleService {
   getStarShips() : Observable<any> {
     return this.http.get("https://swapi.dev/api/starships/")
     }
+
   getFilms() : Observable<any> {
     return this.http.get("https://swapi.dev/api/films");
-   
-    }
-  getPlanets() : Observable<any> {
-    return this.http.get("https://swapi.dev/api/planets");
-   
-    }
-  getSpecies() : Observable<any> {
-    return this.http.get("https://swapi.dev/api/Species");
-   
-    }
-  getVehicles() : Observable<any> {
-    return this.http.get("https://swapi.dev/api/vehicles");
-   
     }
 
-    //função da requisição
-    getData(){
-      return this.http.get('https://jsonplaceholder.typicode.com/users').
-      pipe(
-        map ((response:any) => response.map((item:any) => item['name']))
-      )
+  getPlanets() : Observable<any> {
+    return this.http.get("https://swapi.dev/api/planets");
+    }
+
+  getSpecies() : Observable<any> {
+    return this.http.get("https://swapi.dev/api/Species");
+    }
+
+  getVehicles() : Observable<any> {
+    return this.http.get("https://swapi.dev/api/vehicles");
     }
 
     getFilmById(id: string): Observable<any> {
@@ -93,8 +82,5 @@ export class PeopleService {
               observer.complete();
             });
         })));
-   
-
-
  }
 }

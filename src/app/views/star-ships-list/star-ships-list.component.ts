@@ -15,7 +15,6 @@ export class StarShipsListComponent implements OnInit {
 
   isLoading = false;
   ngOnInit(): void {
-    
     this.peopleService.getStarShips().subscribe(d => {
       this.starShips$ = this.peopleService.getStarShips()
       this.isLoading = true;

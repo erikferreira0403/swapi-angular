@@ -20,7 +20,6 @@ export class FilmsComponent implements OnInit {
   ngOnInit(): void {
     this.films$ = this.peopleService.getFilms()
     this.http.get(this.url).subscribe(d => {
-   
       this.isLoading=true})
       
     

@@ -27,15 +27,10 @@ export class PeopleDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-   
-     this.peopleService.getPeoplebyId(id!).subscribe(d => 
+
+    this.peopleService.getPeoplebyId(id!).subscribe(d => 
       {this.isLoading=true})
-    // )
-    this.films$ = this.peopleService.getFilms()
-   
 
-     this.people$ = this.peopleService.getPeoplebyId(id!)
-   
-
+    this.people$ = this.peopleService.getPeoplebyId(id!)
     }
 }
