@@ -19,16 +19,10 @@ export class FilmDetailComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
 
-    //  this.peopleService.getFilmbyId(id!).subscribe(d => 
-    //   {this.isLoading=true;
-        
-    //   console.log(d)
-      
-    //   // this.films$ = this.peopleService.getFilmbyId(id!)
-    //   this.films$ = this.peopleService.getFilmesById(id!)
-    // })
+     this.peopleService.getFilmById(id!).subscribe(d => 
+      {this.isLoading=true;})
 
-    this.films$ = this.peopleService.getPipesById(id!)
+    this.films$ = this.peopleService.getFilmById(id!)
 
   }
 

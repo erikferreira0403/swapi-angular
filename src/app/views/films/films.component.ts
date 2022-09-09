@@ -25,5 +25,5 @@ export class FilmsComponent implements OnInit {
       
     
   }
-
+  filter(){}
 }

@@ -1,28 +1,9 @@
-/* 
-  
-  *{
-    color: black;
-  }
-  table, th, td {
-    border:1px solid black;
-    color: black;
-    width: 90%;
-    margin: auto;
-    padding: 5;
-    font-size: 0.8rem;
-    
 
-  } 
-
-  td{
-  padding:
-   10px 20px 10px 20px;
-   font-size: 0.9rem;
-  } */
   table {
     margin: auto;
     font-size: 20px;
     width: 90%;
+    padding-left: 40px;
     
 }
 li{
@@ -56,3 +37,4 @@ th {
   .spinner{
     margin: auto;
   }
+ 

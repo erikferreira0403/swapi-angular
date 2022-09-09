@@ -2,7 +2,7 @@
     margin: auto;
   }
 table, th, td {
-    border:1px solid black;
+
     width: 90%;
     margin: auto;
     justify-content: center;
@@ -15,4 +15,11 @@ table, th, td {
   
   a{
     font-style: none;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .title{
+    margin: auto;
+    justify-content: center;
   }

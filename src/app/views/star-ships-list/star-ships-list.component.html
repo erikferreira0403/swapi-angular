@@ -1,7 +1,18 @@
 <!-- <mat-progress-bar *ngIf="!isLoading" mode="indeterminate" ></mat-progress-bar> -->
+
+
+<table>
+<thead>
+    <tr>
+      <th>
+          <mat-card class="content">
+              Starships
+               </mat-card>
+      </th>
+  </tr>
+  </thead>
+</table>
 <mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>
-
-
 <mat-accordion  *ngIf="starShips$ | async as starShips">    
     <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
                          (closed)="panelOpenState = false" *ngFor="let item of starShips.results" >
@@ -87,9 +98,7 @@
                     <h2 class="content">passengers</h2>
                 </th>
                 
-                <th>
-                    <h2 class="content">films</h2>
-                </th>
+               
             </tr>
         </thead>
         <tbody>
@@ -113,12 +122,12 @@
                 <td>
                     {{item.passengers}}
                 </td>
-                <td>
-                    <ul class="films" *ngFor="let item of item.films">
+                <!-- <td>
+                    <ul class="films" *ngFor="let item of item.films ; let id = 'index+1 ';">
                         <li>{{item}}</li>
                     </ul>
                     
-                </td>
+                </td> -->
             </tr>
         </tbody>
     </table> 

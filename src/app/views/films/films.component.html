@@ -1,14 +1,16 @@
-<mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>
-
-<!-- <mat-progress-bar *ngIf="!isLoading" mode="indeterminate" ></mat-progress-bar> -->
-<table>
+<table  >
     <thead>
         <tr>
             <th>
-                <h2 class="">Nome do Filme</h2>
+                <mat-card class="content">
+                    Films
+                
+                     </mat-card>
             </th>
         </tr>
     </thead>
+    <mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>
+
     <tbody *ngIf="films$ | async as films">
         <tr *ngFor="let item of films.results ; let id = 'index+1 ';">
             <td >

@@ -1,5 +1,6 @@
 <mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>
 
+
 <!-- <mat-progress-bar *ngIf="!isLoading" mode="indeterminate"></mat-progress-bar> -->
 <table *ngIf="films$ | async as films" class="table-container">
     <thead>
@@ -62,21 +63,31 @@
                                             </mat-panel-description>
 
                                         </mat-expansion-panel-header>
-                                        <td> Planets
+                                        <table>
+                                            <thead>
+                                                <th>planets</th>
+                                                <th>starships</th>
+                                                <th>vehicles</th>
+                                            </thead>
+                                        <td> 
                                             <ul *ngFor="let item of films.planets">
                                                 <li>{{item.name}}</li>
+                                                <br>
                                             </ul>
                                         </td>
-                                        <td> Starships
+                                        <td> 
                                             <ul *ngFor="let item of films.starships">
                                                 <li>{{item.name}}</li>
+                                                <br>
                                             </ul>
                                         </td>
-                                        <td> Vehicles
+                                        <td> 
                                             <ul *ngFor="let item of films.vehicles">
                                                 <li>{{item.name}}</li>
+                                                <br>
                                             </ul>
                                         </td>
+                                    </table>
                                     </mat-expansion-panel>
                                 </mat-accordion>
                             </tr>

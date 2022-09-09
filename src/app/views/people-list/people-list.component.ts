@@ -14,24 +14,16 @@ export class PeopleListComponent implements OnInit {
   
   isLoading = false;
   public people$!:  Observable<any>;
-  
-  displayedColumns: string[] = ['id'];
-  dataSource: MatTableDataSource<any> = new MatTableDataSource();
-
 
   constructor(private http: HttpClient, private peopleService: PeopleService) { }
 
   ngOnInit(): void {
-    
     this.http.get(this.url).subscribe(d => {
       console.log(d)
       this.isLoading = true;
       this.people$ = this.peopleService.getPeople()
     }) 
-   
   }
-
-
 }
     
   

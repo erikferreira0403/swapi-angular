@@ -15,16 +15,15 @@ export class PeopleDetailComponent implements OnInit {
   public people$!:  Observable<any>;
   public films$!:  Observable<any>;
   isLoading = false;
-  options=["sam", "varun", "jasmine"];
-  formgroup: any = FormGroup
- filteredoptions: any;
+  
+//   options=["sam", "varun", "jasmine"];
+//   formgroup: any = FormGroup
+//  filteredoptions: any;
  
 
   constructor(
     private route: ActivatedRoute,
-    private peopleService: PeopleService,
-    private http: HttpClient ,
-    private fb : FormBuilder) { }
+    private peopleService: PeopleService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
@@ -32,43 +31,11 @@ export class PeopleDetailComponent implements OnInit {
      this.peopleService.getPeoplebyId(id!).subscribe(d => 
       {this.isLoading=true})
     // )
+    this.films$ = this.peopleService.getFilms()
    
 
      this.people$ = this.peopleService.getPeoplebyId(id!)
    
-    //  aqui a função puxar pro option
-   
-    //   this.getName();
-    //  this.initForm();
-     console.log(this.options)
-  
+
     }
-    
-    
-
-    // initForm(){
-    //   this.formgroup = this.fb.group({
-    //     'employee' : ['']
-    //   })
-    //   this.formgroup.get('employee').valueChanges.subscribe((response: any) => {
-    //     console.log('data is', response)
-    //     this.filteredData(response);
-
-    //   })
-    // }
-  
-
-    // filteredData(enteredData: string){
-    //   this.filteredoptions = this.options.filter(item => {
-    //     return item.toLowerCase().indexOf(enteredData.toLowerCase()) > -1
-    //   })
-    // }
-    
-    // getName(){
-    //   this.peopleService.getData().subscribe(response =>{
-    //     this.options = response
-    //     this.filteredoptions = response
-    //    })
-    // }
-
 }
