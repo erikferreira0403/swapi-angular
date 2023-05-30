@@ -1,14 +1,61 @@
-table, th, td {
-  
+table {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  border: 1px solid purple; /* Define a largura e o estilo da borda */
+  border-radius: 10px; /* Ajuste o valor do raio conforme necessário */
     width: 90%;
     margin: auto;
     justify-content: center;
-    
+
   }
-.title:hover {
-    background-color: rgba(255, 255, 255, 0.729);   
-    cursor: pointer;
-  }
+
   .spinner{
+    margin: 10vh auto;
+  }
+
+  .title:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transform-origin: center;
+  }
+
+  a{
+    font-style: none;
     margin: auto;
+    justify-content: center;
+  }
+
+  .title{
+    color: yellow;
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+
+.yoda {
+  padding: 10px;
+  background-color: rgb(186, 120, 120);
+  margin: 10px 10px 10px 24%;
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+   }
+   .link{
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-family: 'Silkscreen', cursive;
+      text-shadow: 10px 10px 5px black;
+
+  }
+
+  .background-image {
+    background-image: url('../../../assets/pngimg.png');
+    background-repeat: no-repeat;
+    margin-left: 50px;
+    background-size: 30%;
+    width: 50%;
+    height: 10vh;
   }

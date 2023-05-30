@@ -1,27 +1,23 @@
+<app-yoda [texto]="textoDoPai" ></app-yoda>
+
 <table  >
     <thead>
         <tr>
             <th>
                 <mat-card class="content">
                     Films
-                
+
                      </mat-card>
             </th>
         </tr>
     </thead>
-    <mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>
 
-    <tbody *ngIf="films$ | async as films">
-        <tr *ngFor="let item of films.results ; let id = 'index+1 ';">
-            <td >
-               <a routerLink="/filmDetail/{{ id }}" >
-                    <mat-card class="title">
-                    
-                    {{item.title}}
 
-                    </mat-card>
-             </a>
-            </td>
-        </tr>
-    </tbody>
-</table> 
+    <mat-nav-list *ngIf="films$ | async as films">
+      <mat-list-item class="title" *ngFor="let item of films.results ; let id = 'index+1 ';"  routerLink="/filmDetail/{{ id }}">
+         <a matListItemTitle > {{item.title}}
+        </a>
+      </mat-list-item>
+    </mat-nav-list>
+</table>
+<mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>

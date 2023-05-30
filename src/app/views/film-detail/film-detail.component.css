@@ -1,9 +1,15 @@
 
 table {
-    margin: auto;
-    font-size: 20px;
-    width: 90%;
-    
+  background-color: rgba(0, 0, 0, 0.7);
+border-radius: 10px;
+border: 1px solid purple; /* Define a largura e o estilo da borda */
+  margin: auto;
+  font-size: 20px;
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+
+
 }
 
 td {
@@ -11,7 +17,7 @@ td {
     text-align: center;
     padding: 20px;
     line-break: anywhere;
-   
+
 }
 li{
   list-style: none;
@@ -26,22 +32,44 @@ th {
     padding: 10px;
 }
 
-  .content{
-    font-size: 1.03rem;
-    font-family: 'Silkscreen', cursive;
+.content, .title{
+
+
+  font-size: 1.3rem;
+  font-family: 'Silkscreen', cursive;
+  color: yellow;
+  text-align: center;
 }
-  .container{
+  .table-container{
     width: 90%;
     margin: auto;
     justify-content: center;
-    
+
   }
   .accordion{
+
     width: 90%;
     margin: auto;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: yellow;
+    border-radius: 10px;
+    border: 1px solid purple;
 }
-.spinner{
-  margin: auto;
-  
+.accordion > table {
+  border: 0px ;
+
 }
+  .spinner{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+   margin-top: 20%;
+  }
+
+  .name{
+    font-size: 1.3rem;
+    font-family: 'Silkscreen', cursive;
+    color: yellow;
+    text-align: center;
+    margin-top: 40px;
+  }

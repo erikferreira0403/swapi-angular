@@ -2,32 +2,32 @@
 
 
 <!-- <mat-progress-bar *ngIf="!isLoading" mode="indeterminate"></mat-progress-bar> -->
-<table *ngIf="films$ | async as films" class="table-container">
+<div *ngIf="films$ | async as films" class="table-container">
     <thead>
         <tr>
             <Th>
-                <mat-card class="title">
+                <h1 class="name">
 
                     {{films.title}} | EPISODE {{films.episode_id}}
 
-                </mat-card>
+                </h1>
             </Th>
         </tr>
     </thead>
     <tbody>
-        <mat-card >
+
             <tr>
                 <td>
                     <table>
                         <thead>
 
                             <th class="content">Opening Crawl</th>
-                            
+
                         </thead>
                         <tbody>
 
                             <tr>
-                                <td>
+                                <td class="content">
 
                                     {{films.opening_crawl}}
                                 </td>
@@ -42,7 +42,7 @@
                                         <th class="content">release_date</th>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr class="content">
                                             <td>{{films.director}}</td>
                                             <td>{{films.producer}}</td>
                                             <td>{{films.release_date}}</td>
@@ -55,10 +55,10 @@
                                     <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
                                         (closed)="panelOpenState = false">
                                         <mat-expansion-panel-header>
-                                            <mat-panel-title *ngIf="films">
+                                            <mat-panel-title class="content" *ngIf="films">
                                                 Planets/Starships/Vehicles details
                                             </mat-panel-title>
-                                            <mat-panel-description>
+                                            <mat-panel-description class="content">
                                                 Click to see details
                                             </mat-panel-description>
 
@@ -69,19 +69,19 @@
                                                 <th>starships</th>
                                                 <th>vehicles</th>
                                             </thead>
-                                        <td> 
+                                        <td>
                                             <ul *ngFor="let item of films.planets">
                                                 <li>{{item.name}}</li>
                                                 <br>
                                             </ul>
                                         </td>
-                                        <td> 
+                                        <td>
                                             <ul *ngFor="let item of films.starships">
                                                 <li>{{item.name}}</li>
                                                 <br>
                                             </ul>
                                         </td>
-                                        <td> 
+                                        <td>
                                             <ul *ngFor="let item of films.vehicles">
                                                 <li>{{item.name}}</li>
                                                 <br>
@@ -95,11 +95,11 @@
                         <mat-accordion *ngIf="films$ | async as films">
                             <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
                                 (closed)="panelOpenState = false">
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title *ngIf="films">
+                                <mat-expansion-panel-header >
+                                    <mat-panel-title *ngIf="films" class="content">
                                         Film characters
                                     </mat-panel-title>
-                                    <mat-panel-description>
+                                    <mat-panel-description class="content">
                                         click to see details
                                     </mat-panel-description>
 
@@ -112,6 +112,6 @@
                     </table>
                 </td>
             </tr>
-        </mat-card>
+
     </tbody>
-</table>
+  </div>

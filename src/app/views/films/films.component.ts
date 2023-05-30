@@ -14,6 +14,7 @@ export class FilmsComponent implements OnInit {
   isLoading = false;
   displayedColumns: string[] = ['Name']
   transactions: any[] = []
+  textoDoPai = "to get the films knowlegde to defeat the dark side"
 
   constructor(private peopleService: PeopleService,private http: HttpClient) { }
 
@@ -21,8 +22,6 @@ export class FilmsComponent implements OnInit {
     this.films$ = this.peopleService.getFilms()
     this.http.get(this.url).subscribe(d => {
       this.isLoading=true})
-      
-    
   }
   filter(){}
 }
