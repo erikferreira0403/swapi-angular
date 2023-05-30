@@ -29,7 +29,7 @@ export class PeopleService {
         forkJoin(movie.starships.map((starship: string) => this.http.get(starship)))
         .subscribe((starships: any) => {
           movie.starships = starships;
-          
+
         });
         forkJoin(movie.films.map((film: string) => this.http.get(film)))
         .subscribe((films: any) => {

@@ -1,25 +1,33 @@
   .spinner{
-    margin: auto;
+    margin: 10vh auto;
   }
 table, th, td {
-
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  border: 1px solid purple; /* Define a largura e o estilo da borda */
+  border-radius: 10px; /* Ajuste o valor do raio conforme necessário */
     width: 90%;
     margin: auto;
     justify-content: center;
-    
+
   }
 .title:hover {
-    background-color: rgba(255, 255, 255, 0.729);   
     cursor: pointer;
+    transform: scale(1.1);
+    transform-origin: center;
   }
-  
+
   a{
     font-style: none;
     margin: auto;
     justify-content: center;
+
   }
 
+
   .title{
-    margin: auto;
-    justify-content: center;
+    color: yellow;
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
   }

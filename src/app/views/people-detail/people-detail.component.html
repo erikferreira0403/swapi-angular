@@ -1,25 +1,19 @@
-<mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>
 
 <div class="container"  *ngIf="people$ | async as people">
-    
-<mat-card class="title ">
-    {{people.name}} 
-
-     </mat-card>
-<mat-card>
+  <h1 class="name">
+    {{people.name}}
+     </h1>
 <table>
+
+
+
     <tr>
-        <th>
-            <mat-card class="content">
-                Character details
-            
-                 </mat-card>
-        </th>
+                 <h1 class="title">
+                  Character details
+                 </h1>
     </tr>
     <tbody >
-      
          <tr>
-            <td >
                     <table>
                         <thead>
                         <th class="content">height</th>
@@ -56,43 +50,44 @@
                     </tr>
                 </tbody>
                 </table>
+                <br>
 
-                <table>
+                <table class="secondTable">
                     <thead>
-                      
-                        <th>
+
+                        <th class="content">
                             films
                         </th>
-                        <th>
+                        <th class="content">
                             vehicles
                         </th>
-                        <th>
+                        <th class="content">
                             starships
                         </th>
                     </thead>
                     <tbody>
-                        
+
                         <td >
                           <ul  *ngFor="let item of people.films">
                             <li>{{item.title}}</li>
-                          </ul>  
+                          </ul>
                         </td>
                         <td >
-                            <ul   *ngFor="let item of people.vehicles">
-                                <li>{{item.name}}</li>
-                              </ul>  
+                            <ul *ngFor="let item of people.vehicles" >
+                              <li>{{item.name}}</li>
+                            </ul>
+
                         </td>
                         <td>
                             <ul  *ngFor="let item of people.starships">
                                 <li>{{item.name}}</li>
-                              </ul>  
+                              </ul>
                         </td>
                     </tbody>
                 </table>
-            </td>
         </tr>
     </tbody>
-
 </table>
-</mat-card>
 </div>
+
+<mat-spinner  class="spinner" *ngIf="!isLoading"></mat-spinner>
