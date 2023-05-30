@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './components/nav/nav.component';
 
 
-
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
@@ -34,6 +33,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { FilmDetailComponent } from './views/film-detail/film-detail.component';
 import { StarshipsListNavigateComponent } from './components/starships-list-navigate/starships-list-navigate.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { YodaComponent } from './components/yoda/yoda.component';
 
 
 
@@ -52,10 +52,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     PeopleDetailComponent,
     FilmDetailComponent,
     StarshipsListNavigateComponent,
-    
-    
+    YodaComponent,
 
-   
+
+
+
   ],
   imports: [
     BrowserModule,
