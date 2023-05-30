@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  textoDoPai = "to get the knowlegde to defeat the dark side"
 
   constructor(private http: HttpClient) { }
 
