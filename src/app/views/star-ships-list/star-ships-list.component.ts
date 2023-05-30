@@ -10,8 +10,13 @@ import { Observable } from 'rxjs';
 export class StarShipsListComponent implements OnInit {
   public starShips$!:  Observable<any>;
   panelOpenState = false;
+  showPassword = false;
+  itemSelecionado: { [key: string]: boolean } = {};
+  textoDoPai = "to get the starships knowlegde to defeat the dark side"
+
+
   constructor(private peopleService: PeopleService) { }
-  
+
 
   isLoading = false;
   ngOnInit(): void {
@@ -19,7 +24,15 @@ export class StarShipsListComponent implements OnInit {
       this.starShips$ = this.peopleService.getStarShips()
       this.isLoading = true;
     })
-    
+
+
   }
 
+  togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
+  }
+
+  isItemSelecionado(item: any): boolean {
+    return this.itemSelecionado[item.id] || false;
+  }
 }
