@@ -2,19 +2,22 @@
     flex: 1 1 auto;
   }
 .nav{
-    background-color: rgb(148, 14, 14);   
+    background-color: rgb(148, 14, 14);
     height: 50px;
     display: flex;
     align-items: center;
-    
-    
+
+
 }
 
 .title {
     padding: 10px;
-    background-color: rgb(186, 120, 120);   
-    margin: 20px;
+    background-color: rgb(186, 120, 120);
+    margin: 10px 10px 10px 24%;
+    width: 50%;
     color: white;
+    display: flex;
+    flex-direction: row;
      }
      .link{
         margin-left: 20px;
@@ -23,5 +26,13 @@
         font-family: 'Silkscreen', cursive;
         text-shadow: 10px 10px 5px black;
 
-    } 
-  
+    }
+
+    .background-image {
+      background-image: url('../../../assets/pngimg.png');
+      background-repeat: no-repeat;
+      margin-left: 50px;
+      background-size: 30%;
+      width: 50%;
+      height: 10vh;
+    }

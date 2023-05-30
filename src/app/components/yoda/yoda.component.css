@@ -1,0 +1,29 @@
+
+.title {
+  padding: 10px;
+  background-color: rgb(186, 120, 120);
+  margin: 10px 10px 10px 24%;
+  width: 50%;
+  color: white;
+
+  display: flex;
+  flex-direction: row;
+   }
+   .link{
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-family: 'Silkscreen', cursive;
+      text-shadow: 10px 10px 5px black;
+
+  }
+
+  .background-image {
+    position: fixed;
+    background-image: url('../../../assets/pngimg.png');
+    background-repeat: no-repeat;
+    margin-left: 50%;
+    background-size: 30%;
+    width: 50%;
+    height: 10vh;
+  }
