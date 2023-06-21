@@ -44,7 +44,7 @@
   </tr>
   </thead>
     <mat-nav-list *ngIf="people$ | async as people" >
-      <mat-list-item class="title" *ngFor="let item of people.results ; let id = 'index+1 ';" routerLink="/peopleDetail/{{ id }}" [ngClass]="{'show': showList}">
+      <mat-list-item class="title" *ngFor="let item of people.results ; let id = 'index+1 ';" routerLink="/peopleDetail/{{ id }}">
          <a matListItemTitle > {{item.name}}
         </a>
       </mat-list-item>

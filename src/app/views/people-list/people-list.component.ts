@@ -11,7 +11,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class PeopleListComponent implements OnInit {
   url = 'https://swapi.dev/api/people/';
-  showList: boolean = false;
+
 
   textoDoPai = "to get the characters knowlegde to defeat the dark side"
 
@@ -25,7 +25,6 @@ export class PeopleListComponent implements OnInit {
       console.log(d)
       this.isLoading = true;
       this.people$ = this.peopleService.getPeople()
-      this.showList = true;
     })
   }
 }
